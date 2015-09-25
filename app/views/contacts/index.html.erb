@@ -12,15 +12,19 @@
       </div>
     </div>
   <% end %>
-  <%= form_for(@static) do |f| %>
+  <%= form_for(@contact) do |f| %>
   <div class="explanation">
     <div class="field">
-      <p><i class="fa fa-pencil"></i><%= f.label :contact_title %></p>
-      <p><%= f.text_field :contact_title, placeholder: 'タイトル記入' %></p>
+      <p><i class="fa fa-pencil"></i><%= f.label :title %></p>
+      <p><%= f.text_field :title, placeholder: 'タイトル記入' %></p>
     </div>
     <div class="field">
-      <p><i class="fa fa-commenting-o"></i><%= f.label :contact_body %></p>
-      <p><%= f.text_area :contact_body %></p>
+      <p><i class="fa fa-commenting-o"></i><%= f.label :body %></p>
+      <p><%= f.text_area :body %></p>
+    </div>
+    <div class="field">
+      <p><%= f.label :tel %></p>
+      <p><%= f.text_field :tel %></p>
     </div>
     <div class="field">
       <%= f.submit class: "btn btn-primary" %>

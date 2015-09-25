@@ -1,16 +1,13 @@
-class StaticsController < ApplicationController
+class ContactsController < ApplicationController
   def index
-  end
-
-  def contact
-    @contact = Static.new
+    @contact = Contact.new
   end
 
   def thanks
   end
 
   def create
-    @contact = Static.create(contact_params)
+    @contact = Contact.create(contact_params)
     if @contact.save
       redirect_to contacts_thanks_path
     else
