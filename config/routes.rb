@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   root 'statics#index'
-  get 'contact', to: 'statics#contact' 
+  get 'contacts', to: 'contacts#index'
+  get 'contacts/thanks', to: 'contacts#thanks'
+  resources :contacts, :only => [:index, :create]
   resources :blogs
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

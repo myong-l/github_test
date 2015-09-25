@@ -1,14 +1,47 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 <head>
-  <title>Day14</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Achieve</title>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag "bootstrap", media: "all", "data-turbolinks-track" => true %>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="/assets/common.js"></script>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <div class="navbar navbar-default">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="javascript:void(0)">Brand</a>
+    </div>
+    <div class="navbar-collapse collapse navbar-responsive-collapse">
+        <form class="navbar-form navbar-left">
+            <input type="text" class="form-control col-lg-8" placeholder="Search">
+        </form>
+        <ul class="nav navbar-nav navbar-right">
+            <li><%= link_to 'Top', root_path %></li>
+            <li><%= link_to 'Contact', contacts_path %></li>
 
+        </ul>
+    </div>
+</div>
+<div class="alert alert-info" role="alert">
+  <p class="notice"><%= notice %></p>
+</div>
+<div class="alert alert-info" role="alert">
+  <p><%= alert %></p>
+</div>
 <%= yield %>
-
-</body>
+<div class="page-top">
+<a href="#" class="btn btn-info btn-fab btn-raised mdi-action-grade"><div class="ripple-wrapper"></div></a>
+</div>
+  </body>
 </html>
